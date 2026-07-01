@@ -836,3 +836,111 @@ a { text-decoration: none; }
 .tech-eyebrow-blue { color: #1A7A9E; }
 .tech-eyebrow-teal { color: #4080A0; }
 .tech-eyebrow-gold { color: #B8852A; }
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero { padding: 120px 0 60px; }
+  .hero-mock { max-width: 540px; margin: 0 auto; }
+  .hero-glow-1 { width: 280px; height: 280px; top: 4%; right: -40px; }
+  .hero-glow-2 { width: 260px; height: 260px; }
+
+  .intro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .intro-cards { grid-template-columns: repeat(3, 1fr); }
+
+  .obj-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .mvc-steps { flex-wrap: wrap; justify-content: center; }
+  .mvc-step-card, .mvc-step-card-dark { max-width: 160px; flex: 0 0 160px; }
+  .mvc-step-arrow { font-size: 18px; padding: 0 3px; }
+
+  .estandares-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .cta-card { padding: 56px 32px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+
+  .nav { padding: 10px 0; }
+  .nav-inner { margin: 0 12px; padding: 8px 12px 8px 14px; }
+  .nav-links { gap: 2px; font-size: 12px; }
+  .nav-link { padding: 6px 8px; }
+  .nav-cta { font-size: 12px; padding: 8px 14px; }
+
+  .hero { padding: 100px 0 40px; min-height: auto; }
+  .hero-grid { gap: 32px; }
+  .hero-title { font-size: clamp(32px, 10vw, 46px); }
+  .hero-sub { font-size: 17px; }
+  .hero-actions { flex-direction: column; }
+  .hero-cta-primary, .hero-cta-secondary { justify-content: center; }
+  .hero-stats { gap: 20px; margin-top: 32px; flex-wrap: wrap; }
+  .hero-stat-divider { display: none; }
+  .hero-glow-1, .hero-glow-2 { display: none; }
+
+  .mock-card { padding: 16px; }
+  .mock-grid { grid-template-columns: 1fr; gap: 8px; }
+  .mock-float { position: static; margin-top: 16px; }
+
+  .section, .section-white, .section-white-top, .section-gray { padding: 70px 0; }
+  .py-120 { padding: 60px 0; }
+
+  .intro-cards { grid-template-columns: 1fr; gap: 12px; }
+
+  .obj-grid { grid-template-columns: 1fr; }
+  .obj-hero-card { padding: 32px 24px; }
+  .obj-divider { margin: 40px 0 20px; }
+
+  .mod-card, .mod-card-highlight { flex: 0 0 300px; padding: 24px; height: 50vh; }
+  .mod-card-title { font-size: 22px; }
+  .mod-header { top: 20px; }
+  .mod-header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .mod-scroll-hint { display: none; }
+  .mod-track { padding-left: 20px; gap: 16px; }
+
+  .mvc-header { margin-bottom: 30px; }
+  .mvc-steps { flex-direction: column; align-items: center; gap: 4px; }
+  .mvc-step-card, .mvc-step-card-dark { max-width: 240px; flex: 0 0 auto; width: 100%; padding: 18px 16px; }
+  .mvc-step-arrow { transform: rotate(90deg); padding: 2px 0; }
+  .mvc-tags { gap: 8px; }
+  .mvc-tag { font-size: 12px; padding: 6px 14px; }
+
+  .patrones-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
+  .patron-card { flex-direction: column; gap: 12px; padding: 24px; }
+
+  .galeria-grid { grid-template-columns: 1fr; gap: 16px; }
+  .galeria-img { height: 200px; }
+
+  .cta-card { padding: 40px 24px; border-radius: 20px; }
+  .cta-actions { flex-direction: column; align-items: center; }
+  .cta-btn-primary, .cta-btn-secondary { width: 100%; justify-content: center; }
+
+  .footer { padding: 32px 0; }
+  .footer-inner { flex-direction: column; text-align: center; }
+
+  .code-table-row, .code-table-header { grid-template-columns: 1fr 1fr; gap: 4px; }
+  .code-table-row span:last-child { grid-column: span 2; }
+
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .nav-links { font-size: 11px; gap: 1px; }
+  .nav-link { padding: 4px 6px; }
+  .nav-cta { display: none; }
+
+  .eyebrow { font-size: 10px; gap: 6px; }
+  .h2, .h2-section, .h2-sm { font-size: clamp(24px, 8vw, 32px); }
+
+  .mod-card, .mod-card-highlight { flex: 0 0 260px; padding: 20px; height: 44vh; }
+  .mod-card-title { font-size: 20px; }
+
+  .tech-grid { grid-template-columns: 1fr; }
+
+  .estandares-list { gap: 8px; }
+  .estandares-item { font-size: 13px; }
+}
