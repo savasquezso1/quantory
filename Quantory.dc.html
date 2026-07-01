@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="src/styles.dc.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <x-dc>
+    <helmet>
+    </helmet>
+    <div ref="{{ rootRef }}" class="root">
+
+      <!-- progress bar -->
+      <div class="progress-bar-wrap">
+        <div data-progress class="progress-bar"></div>
+      </div>
+
+      <!-- nav -->
+      <nav class="nav">
+        <div class="nav-inner">
+          <a href="#top" class="nav-logo">
+            <span class="logo-mark">Q</span>
+            <span class="logo-text">Quantory</span>
+          </a>
+          <div class="nav-links">
+            <a href="#intro" class="nav-link">Introducción</a>
+            <a href="#objetivos" class="nav-link">Objetivos</a>
+            <a href="#modulos" class="nav-link">Módulos</a>
+            <a href="#arquitectura" class="nav-link">Arquitectura</a>
+            <a href="#tecnologias" class="nav-link">Tecnologías</a>
+          </div>
+          <a href="https://www.figma.com/design/p40P7JnvGFRvQQDGRcTBh2/Quantory--copia-?node-id=0-1&t=OFaUwLk3iDPxi6yq-1" target="_blank" rel="noopener noreferrer" class="nav-cta">Conocer Quantory</a>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="hero-bg-dots"></div>
+        <div data-parallax data-speed="0.25" class="hero-glow-1"></div>
+        <div data-parallax data-speed="-0.18" class="hero-glow-2"></div>
+
+        <div class="container hero-grid">
+          <div>
+            <div data-hero-eyebrow class="hero-eyebrow">
+              Sistema ERP · Gestión de inventario
+            </div>
+            <h1 class="hero-title">
+              <span class="hero-title-line"><span data-hero-line class="block">Controla tu inventario.</span></span>
+              <span class="hero-title-line"><span data-hero-line class="hero-title-gradient">Haz crecer tu
+                  negocio.</span></span>
+            </h1>
+            <p data-hero-sub class="hero-sub">
+              <strong class="text-dark fw-700">Quantory</strong> es un ERP simple y potente que centraliza stock,
+              ventas, costos y proveedores — pensado para emprendedores y pequeños negocios en crecimiento.
+            </p>
+            <div class="hero-actions">
+              <a data-hero-cta href="#objetivos" class="hero-cta-primary">
+                Ver objetivos
+                <span class="arrow-icon">→</span>
+              </a>
+              <a data-hero-cta href="#modulos" class="hero-cta-secondary">
+                Explorar módulos
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <div class="hero-stat-num"><span data-count="6" data-suffix="">0</span></div>
+                <div class="hero-stat-label">Módulos clave</div>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div>
+                <div class="hero-stat-num"><span data-count="100" data-suffix="%">0</span></div>
+                <div class="hero-stat-label">Tiempo real</div>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div>
+                <div class="hero-stat-num">MVC</div>
+                <div class="hero-stat-label">Arquitectura</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-hero-mock class="hero-mock">
+            <div class="mock-card">
+              <div class="mock-header">
+                <div class="mock-dots">
+                  <span class="mock-dot"></span>
+                  <span class="mock-url">dashboard.quantory</span>
+                </div>
+                <span class="mock-badge">EN VIVO</span>
+              </div>
+              <div class="mock-grid">
+                <div class="mock-kpi">
+                  <div class="kpi-label kpi-label-muted">Costo de inventario</div>
+                  <div class="kpi-value"><span data-count="128450" data-prefix="$">$0</span></div>
+                </div>
+                <div class="mock-kpi-dark">
+                  <div class="kpi-label kpi-label-light">Valor proyectado</div>
+                  <div class="kpi-value-light"><span data-count="214900" data-prefix="$">$0</span></div>
+                </div>
+              </div>
+              <div class="mock-chart">
+                <div class="mock-chart-header">
+                  <span class="chart-label">Stock por categoría</span>
+                  <span class="chart-change">+12.4%</span>
+                </div>
+                <div class="bars">
+                  <div class="bar-col">
+                    <div data-bar data-h="55" class="bar bar-1"></div>
+                  </div>
+                  <div class="bar-col">
+                    <div data-bar data-h="78" class="bar bar-2"></div>
+                  </div>
+                  <div class="bar-col">
+                    <div data-bar data-h="42" class="bar bar-3"></div>
+                  </div>
+                  <div class="bar-col">
+                    <div data-bar data-h="92" class="bar bar-4"></div>
+                  </div>
+                  <div class="bar-col">
+                    <div data-bar data-h="63" class="bar bar-5"></div>
+                  </div>
+                  <div class="bar-col">
+                    <div data-bar data-h="70" class="bar bar-6"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-rows">
+                <div class="mock-row">
+                  <span class="mock-row-label">productStock · café 250g</span>
+                  <span class="mock-row-badge mock-row-badge-blue">142 uds</span>
+                </div>
+                <div class="mock-row">
+                  <span class="mock-row-label">productStock · té verde</span>
+                  <span class="mock-row-badge mock-row-badge-amber">18 uds</span>
+                </div>
+              </div>
+            </div>
+            <div data-parallax data-speed="0.12" class="mock-float">
+              <div class="mock-float-label">Venta registrada</div>
+              <div class="mock-float-value">generateReport ✓</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO / PROBLEMA -->
+      <section id="intro" class="section-white">
+        <div class="container">
+          <div class="intro-grid">
+            <div data-reveal>
+              <div class="eyebrow eyebrow-blue">
+                <span class="eyebrow-line eyebrow-line-blue"></span> El contexto
+              </div>
+              <h2 class="h2 h2-mt20">Digitalizar procesos ya no es opcional.</h2>
+            </div>
+            <div data-reveal-group class="flex-col gap-26 pt-8">
+              <p class="intro-text">Las empresas y emprendimientos necesitan herramientas que les permitan <strong
+                  class="intro-highlight">administrar procesos de forma eficiente</strong>, optimizar recursos y
+                mantener un mejor control de la información.</p>
+              <p class="intro-text-secondary">Quantory surge como una solución para la gestión y administración de
+                información empresarial: centraliza el control de inventario, el manejo de usuarios, el registro de
+                datos y la generación de reportes en una plataforma organizada, intuitiva y eficiente.</p>
+              <div class="intro-cards">
+                <div class="intro-card">
+                  <div class="intro-card-title">Organización</div>
+                  <div class="intro-card-text">Procesos centralizados y ordenados.</div>
+                </div>
+                <div class="intro-card">
+                  <div class="intro-card-title">Productividad</div>
+                  <div class="intro-card-text">Menos tareas manuales repetitivas.</div>
+                </div>
+                <div class="intro-card">
+                  <div class="intro-card-title">Decisiones</div>
+                  <div class="intro-card-text">Información clara para decidir mejor.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OBJETIVOS -->
+      <section id="objetivos" class="section">
+        <div class="container">
+          <div data-reveal class="text-center max-w-760">
+            <div class="eyebrow eyebrow-blue">
+              <span class="eyebrow-line eyebrow-line-blue"></span> Objetivos del proyecto <span
+                class="eyebrow-line eyebrow-line-blue"></span>
+            </div>
+            <h2 class="h2 h2-centered">Qué queremos lograr</h2>
+          </div>
+
+          <div data-reveal class="obj-hero-card">
+            <div class="obj-glow"></div>
+            <div class="obj-general-label">Objetivo general</div>
+            <p class="obj-general-text">Desarrollar un sistema ERP de gestión de inventario <span
+                class="obj-highlight">accesible y fácil de usar</span>, que permita controlar de forma eficiente el
+              stock, los costos, las ventas y los proveedores — adaptándose a la realidad de negocios en crecimiento.
+            </p>
+          </div>
+
+          <div class="obj-divider">
+            <span class="obj-divider-label">Objetivos específicos</span>
+            <span class="obj-divider-line"></span>
+          </div>
+          <div data-reveal-group class="obj-grid">
+            <div class="obj-card">
+              <div class="obj-card-num">01</div>
+              <h3 class="obj-card-title">Módulo de inventario</h3>
+              <p class="obj-card-text">Crear, categorizar y gestionar productos con facilidad.</p>
+            </div>
+            <div class="obj-card">
+              <div class="obj-card-num">02</div>
+              <h3 class="obj-card-title">Ventas sin bloqueo</h3>
+              <p class="obj-card-text">Registrar ventas aunque la factura de compra aún no haya llegado.</p>
+            </div>
+            <div class="obj-card">
+              <div class="obj-card-num">03</div>
+              <h3 class="obj-card-title">Indicadores en tiempo real</h3>
+              <p class="obj-card-text">Costo total del inventario y valor proyectado de venta, al instante.</p>
+            </div>
+            <div class="obj-card">
+              <div class="obj-card-num">04</div>
+              <h3 class="obj-card-title">Reconteo ágil</h3>
+              <p class="obj-card-text">Reconteo periódico de inventario con formularios rápidos de ajuste.</p>
+            </div>
+            <div class="obj-card">
+              <div class="obj-card-num">05</div>
+              <h3 class="obj-card-title">Compras y proveedores</h3>
+              <p class="obj-card-text">Inventario sincronizado con las facturas de entrada.</p>
+            </div>
+            <div class="obj-card">
+              <div class="obj-card-num">06</div>
+              <h3 class="obj-card-title">Reportes y rentabilidad</h3>
+              <p class="obj-card-text">Reportes de ventas, stock y rentabilidad para decidir mejor.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULOS (horizontal pinned) -->
+      <section id="modulos" data-modules class="mod-section">
+        <div class="mod-header">
+          <div class="mod-header-inner">
+            <div>
+              <div class="eyebrow eyebrow-cyan">
+                <span class="eyebrow-line eyebrow-line-cyan"></span> Módulos del sistema
+              </div>
+              <h2 class="h2-sm text-white h2-mt14">Todo lo que Quantory hace por ti</h2>
+            </div>
+            <div class="mod-scroll-hint">scroll <span class="fs-16">→</span></div>
+          </div>
+        </div>
+        <div data-modules-track class="mod-track">
+          <div class="mod-card">
+            <div class="mod-icon-wrap mod-icon-blue"><i class="fa-solid fa-cubes"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/inventario.png" alt="Inventario" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-cyan">01 · Inventario</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Inventario inteligente</h3>
+              <p class="mod-card-desc mod-card-desc-muted">Crea, categoriza y gestiona todos tus productos desde un solo
+                panel ordenado y rápido.</p>
+            </div>
+          </div>
+          <div class="mod-card">
+            <div class="mod-icon-wrap mod-icon-teal"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/ventas.png" alt="Ventas" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-cyan">02 · Ventas</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Ventas sin bloqueo</h3>
+              <p class="mod-card-desc mod-card-desc-muted">Registra ventas aunque el stock aún no esté disponible. Sin
+                frenar la operación.</p>
+            </div>
+          </div>
+          <div class="mod-card">
+            <div class="mod-icon-wrap mod-icon-blue"><i class="fa-solid fa-chart-simple"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/metricas.png" alt="Métricas" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-cyan">03 · Métricas</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Tiempo real</h3>
+              <p class="mod-card-desc mod-card-desc-muted">Costo total del inventario y valor proyectado de venta,
+                actualizados al instante.</p>
+            </div>
+          </div>
+          <div class="mod-card">
+            <div class="mod-icon-wrap mod-icon-teal"><i class="fa-solid fa-arrows-rotate"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/reconteo.png" alt="Ajustes" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-cyan">04 · Ajustes</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Reconteo ágil</h3>
+              <p class="mod-card-desc mod-card-desc-muted">Formularios rápidos para el reconteo periódico y el ajuste de
+                inventario.</p>
+            </div>
+          </div>
+          <div class="mod-card">
+            <div class="mod-icon-wrap mod-icon-blue"><i class="fa-solid fa-truck"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/proveedores.png" alt="Proveedores" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-cyan">05 · Proveedores</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Compras y proveedores</h3>
+              <p class="mod-card-desc mod-card-desc-muted">Mantén el inventario sincronizado con las facturas de entrada
+                de cada proveedor.</p>
+            </div>
+          </div>
+          <div class="mod-card-highlight">
+            <div class="mod-icon-wrap mod-icon-glass"><i class="fa-solid fa-file-lines"></i></div>
+            <div data-module-img class="mod-img-area">
+              <img src="img/reportes.png" alt="Reportes" class="mod-img">
+            </div>
+            <div>
+              <div class="mod-tag mod-tag-white75">06 · Reportes</div>
+              <h3 class="mod-card-title mod-card-title-light ls-n01">Reportes y rentabilidad</h3>
+              <p class="mod-card-desc mod-card-desc-light">Reportes básicos de ventas, stock y rentabilidad para apoyar
+                tus decisiones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARQUITECTURA MVC (pinned scroll) -->
+      <section id="arquitectura" data-mvc class="mvc-section">
+        <div class="mvc-bg-dots"></div>
+        <div class="container mvc-content">
+          <div data-mvc-step class="mvc-header">
+            <div class="eyebrow eyebrow-blue">
+              <span class="eyebrow-line eyebrow-line-blue"></span> Arquitectura del sistema <span
+                class="eyebrow-line eyebrow-line-blue"></span>
+            </div>
+            <h2 class="h2-section h2-mt16">Modelo · Vista · Controlador</h2>
+            <p class="mvc-subtitle max-w-620">Arquitectura por capas (MVC) que separa la lógica del negocio, la interfaz
+              visual y el manejo de datos bajo un modelo cliente-servidor.</p>
+          </div>
+          <div class="mvc-steps">
+            <div data-mvc-step class="mvc-step-card">
+              <div class="mvc-icon-box mvc-icon-light">C</div>
+              <h3 class="mvc-card-title mvc-card-title-dark">Cliente</h3>
+              <p class="mvc-card-desc mvc-card-desc-dark">Realiza peticiones al sistema.</p>
+            </div>
+            <div data-mvc-step class="mvc-step-arrow">→</div>
+            <div data-mvc-step class="mvc-step-card">
+              <div class="mvc-icon-box mvc-icon-light">V</div>
+              <h3 class="mvc-card-title mvc-card-title-dark">Vista</h3>
+              <p class="mvc-card-desc mvc-card-desc-dark">Interfaz visual que ve el usuario.</p>
+            </div>
+            <div data-mvc-step class="mvc-step-arrow">→</div>
+            <div data-mvc-step class="mvc-step-card-dark">
+              <div class="mvc-icon-box mvc-icon-dark">Co</div>
+              <h3 class="mvc-card-title mvc-card-title-light">Controlador</h3>
+              <p class="mvc-card-desc mvc-card-desc-light">Procesa la lógica del negocio.</p>
+            </div>
+            <div data-mvc-step class="mvc-step-arrow">→</div>
+            <div data-mvc-step class="mvc-step-card">
+              <div class="mvc-icon-box mvc-icon-light">M</div>
+              <h3 class="mvc-card-title mvc-card-title-dark">Modelo</h3>
+              <p class="mvc-card-desc mvc-card-desc-dark">Datos y acceso a la base de datos.</p>
+            </div>
+          </div>
+          <div data-mvc-step class="mvc-tags">
+            <span class="mvc-tag">Desarrollo modular</span>
+            <span class="mvc-tag">Mayor escalabilidad</span>
+            <span class="mvc-tag">Trabajo en equipo</span>
+            <span class="mvc-tag">Mantenimiento sencillo</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PATRONES -->
+      <section class="section-white">
+        <div class="container">
+          <div data-reveal class="max-w-680">
+            <div class="eyebrow eyebrow-blue">
+              <span class="eyebrow-line eyebrow-line-blue"></span> Patrones de arquitectura
+            </div>
+            <h2 class="h2-section h2-centered">Construido sobre buenas prácticas</h2>
+          </div>
+          <div data-reveal-group class="patrones-grid">
+            <div class="patron-card">
+              <span class="patron-badge">MVC</span>
+              <div>
+                <h3 class="patron-title">Modelo-Vista-Controlador</h3>
+                <p class="patron-text">Separa la aplicación en Modelo, Vista y Controlador para aislar
+                  responsabilidades.</p>
+              </div>
+            </div>
+            <div class="patron-card">
+              <span class="patron-badge">Capas</span>
+              <div>
+                <h3 class="patron-title">Arquitectura por capas</h3>
+                <p class="patron-text">Divide el sistema en presentación, lógica y datos de forma ordenada.</p>
+              </div>
+            </div>
+            <div class="patron-card">
+              <span class="patron-badge">Módulos</span>
+              <div>
+                <h3 class="patron-title">Modularización</h3>
+                <p class="patron-text">Divide funcionalidades en módulos independientes y reutilizables.</p>
+              </div>
+            </div>
+            <div class="patron-card">
+              <span class="patron-badge">C/S</span>
+              <div>
+                <h3 class="patron-title">Cliente-Servidor</h3>
+                <p class="patron-text">El cliente realiza peticiones y el servidor responde con la información.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECNOLOGIAS -->
+      <section id="tecnologias" class="section">
+        <div class="container">
+          <div data-reveal class="text-center max-w-680">
+            <div class="eyebrow eyebrow-blue">
+              <span class="eyebrow-line eyebrow-line-blue"></span> Stack tecnológico <span
+                class="eyebrow-line eyebrow-line-blue"></span>
+            </div>
+            <h2 class="h2-section h2-centered">Tecnologías web modernas</h2>
+          </div>
+          <div data-reveal-group class="flex-col gap-32 mt-50">
+
+            <!-- FRONTEND -->
+            <div>
+              <div class="tech-section-label">
+                <span class="eyebrow eyebrow-blue fs-12">Frontend</span>
+                <span class="tech-section-line tech-section-line-blue"></span>
+              </div>
+              <div class="tech-grid">
+                <div class="tech-card">
+                  <i class="devicon-react-original colored tech-icon"></i>
+                  <div class="tech-name tech-name-dark">React 18</div>
+                </div>
+                <div class="tech-card">
+                  <i class="devicon-tailwindcss-original colored tech-icon"></i>
+                  <div class="tech-name tech-name-dark">Tailwind CSS</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BACKEND -->
+            <div>
+              <div class="tech-section-label">
+                <span class="eyebrow fs-12 tech-eyebrow-teal">Backend</span>
+                <span class="tech-section-line tech-section-line-teal"></span>
+              </div>
+              <div class="tech-grid">
+                <div class="tech-card-dark">
+                  <i class="devicon-nestjs-original colored tech-icon"></i>
+                  <div class="tech-name tech-name-light">NestJS</div>
+                </div>
+                <div class="tech-card-dark">
+                  <i class="devicon-postgresql-plain colored tech-icon"></i>
+                  <div class="tech-name tech-name-light">PostgreSQL</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIA -->
+      <section class="section-gray">
+        <div class="container">
+          <div data-reveal class="text-center mb-48">
+            <div class="eyebrow eyebrow-blue">
+              <span class="eyebrow-line eyebrow-line-blue"></span> Modelado
+            </div>
+            <h2 class="h2-sm h2-centered">Arquitectura del sistema</h2>
+          </div>
+          <div class="galeria-grid" data-reveal>
+            <div onclick="openLightbox(this.querySelector('img').src)" class="galeria-item">
+              <img src="img/Modelo conceptual QUANTORY.jpg" alt="Modelo conceptual" class="galeria-img">
+            </div>
+            <div onclick="openLightbox(this.querySelector('img').src)" class="galeria-item">
+              <img src="img/modelologico.jpeg" alt="Modelo lógico" class="galeria-img">
+            </div>
+            <div onclick="openLightbox(this.querySelector('img').src)" class="galeria-item">
+              <img src="img/db.jpeg" alt="Base de datos" class="galeria-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX -->
+      <div id="lightbox" onclick="closeLightbox()" class="lightbox">
+        <img id="lightbox-img" src="" alt="" class="lightbox-img">
+        <span class="lightbox-close">&times;</span>
+      </div>
+
+      <script>
+        function openLightbox(src) {
+          document.getElementById('lightbox-img').src = src;
+          document.getElementById('lightbox').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+          document.getElementById('lightbox').style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      </script>
+
+      <!-- ESTANDARES -->
+      <section class="section-white-top">
+        <div class="container">
+          <div class="estandares-grid">
+            <div data-reveal>
+              <div class="eyebrow eyebrow-blue">
+                <span class="eyebrow-line eyebrow-line-blue"></span> Estándar de codificación
+              </div>
+              <h2 class="h2-sm h2-mt18">Código limpio con el stack del proyecto</h2>
+              <div class="estandares-list">
+                <div class="estandares-item"><span class="estandares-check">✓</span> Componentes React con PascalCase
+                  (ProductCard.jsx)</div>
+                <div class="estandares-item"><span class="estandares-check">✓</span> Tailwind CSS para estilos
+                  utilitarios</div>
+                <div class="estandares-item"><span class="estandares-check">✓</span> NestJS con módulos, controladores y
+                  servicios</div>
+                <div class="estandares-item"><span class="estandares-check">✓</span> PostgreSQL con snake_case y
+                  migraciones</div>
+                <div class="estandares-item"><span class="estandares-check">✓</span> Git para control de versiones</div>
+              </div>
+            </div>
+            <div data-reveal class="estandares-code">
+              <div class="code-header">
+                <span class="code-dot code-dot-red"></span>
+                <span class="code-dot code-dot-yellow"></span>
+                <span class="code-dot code-dot-green"></span>
+                <span class="code-filename">conventions.md</span>
+              </div>
+              <div class="code-table">
+                <div class="code-table-header">
+                  <span>Objeto</span><span>Convención</span><span>Ejemplo</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Components React</span><span
+                    class="code-cell-convention">PascalCase.tsx</span><span
+                    class="code-cell-example">ProductTable.tsx</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Hooks</span><span class="code-cell-convention">use +
+                    camelCase</span><span class="code-cell-example">useInventory()</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Controllers</span><span class="code-cell-convention">PascalCase +
+                    .controller</span><span class="code-cell-example">InventoryController</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Servicios</span><span class="code-cell-convention">PascalCase +
+                    .service</span><span class="code-cell-example">ProductService</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Base de datos</span><span
+                    class="code-cell-convention">snake_case</span><span class="code-cell-example">product_stock</span>
+                </div>
+                <div class="code-table-row">
+                  <span class="code-cell-label">Commits</span><span
+                    class="code-cell-convention">conventional</span><span class="code-cell-example">feat: add product
+                    CRUD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta" class="py-120">
+        <div class="container">
+          <div data-reveal class="cta-card">
+            <div class="cta-glow-1"></div>
+            <div class="cta-glow-2"></div>
+            <div class="cta-content">
+              <h2 class="cta-title">Organiza. Controla. Crece.</h2>
+              <p class="cta-sub">Quantory convierte la gestión de inventario en una ventaja real para tu negocio.</p>
+              <div class="cta-actions">
+                <a href="#top" class="cta-btn-primary">Volver al inicio <span class="arrow-icon">↑</span></a>
+                <a href="#objetivos" class="cta-btn-secondary">Revisar objetivos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div class="footer-brand">
+            <span class="footer-mark">Q</span>
+            <span class="footer-brand-name">Quantory</span>
+          </div>
+          <div class="footer-text">Sistema ERP de gestión de inventario · Proyecto académico</div>
+        </div>
+      </footer>
+
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.rootRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.waitForGSAP(0);
+    this._safety = setTimeout(() => this.healVisibility(), 3200);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._safety);
+  }
+
+  healVisibility() {
+    const root = this.getRoot();
+    if (!root) return;
+    const ST = window.ScrollTrigger;
+    const liveTriggers = ST ? new Set(ST.getAll().map(t => t.trigger).filter(Boolean)) : new Set();
+    const show = el => { if (el) { el.style.opacity = '1'; el.style.transform = 'none'; } };
+    const isHidden = el => parseFloat(getComputedStyle(el).opacity || '1') < 0.05;
+
+    root.querySelectorAll('[data-hero-eyebrow],[data-hero-line],[data-hero-sub],[data-hero-cta],[data-hero-mock]').forEach(el => { if (isHidden(el)) show(el); });
+    root.querySelectorAll('[data-bar]').forEach(b => { if (isHidden(b) || getComputedStyle(b).height === '0px') b.style.height = (b.dataset.h || '50') + '%'; });
+
+    root.querySelectorAll('[data-reveal]').forEach(el => { if (isHidden(el) && !liveTriggers.has(el)) show(el); });
+    root.querySelectorAll('[data-reveal-group]').forEach(g => { if (!liveTriggers.has(g)) Array.from(g.children).forEach(c => { if (isHidden(c)) show(c); }); });
+    const mvc = root.querySelector('[data-mvc]');
+    if (mvc && !liveTriggers.has(mvc)) mvc.querySelectorAll('[data-mvc-step]').forEach(s => { if (isHidden(s)) show(s); });
+  }
+
+  getRoot() {
+    return this.rootRef.current || document.querySelector('.sc-host[data-sc-name="Quantory"]') || null;
+  }
+
+  contentReady() {
+    const root = this.getRoot();
+    return !!(root && root.querySelector('[data-modules-track]') && root.querySelector('[data-mvc]') && root.querySelector('#cta'));
+  }
+
+  waitForGSAP(tries) {
+    if (window.gsap && window.ScrollTrigger && this.contentReady()) {
+      this.setupGSAP();
+    } else if (tries < 120) {
+      setTimeout(() => this.waitForGSAP(tries + 1), 100);
+    } else {
+      this.revealFallback();
+    }
+  }
+
+  revealFallback() {
+    const root = this.getRoot();
+    if (!root) return;
+    root.querySelectorAll('[data-reveal],[data-hero-line],[data-hero-eyebrow],[data-hero-sub],[data-hero-cta],[data-hero-mock],[data-mvc-step]').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+    root.querySelectorAll('[data-reveal-group]').forEach(g => Array.from(g.children).forEach(c => { c.style.opacity = '1'; c.style.transform = 'none'; }));
+    root.querySelectorAll('[data-bar]').forEach(b => { b.style.height = (b.dataset.h || '50') + '%'; });
+  }
+
+  setupGSAP() {
+    const root = this.getRoot();
+    if (!root || root.__qInit) return;
+    root.__qInit = true;
+
+    const gsap = window.gsap;
+    const ST = window.ScrollTrigger;
+    gsap.registerPlugin(ST);
+    const els = sel => Array.from(root.querySelectorAll(sel));
+
+    const prog = root.querySelector('[data-progress]');
+    if (prog) {
+      gsap.to(prog, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
+    }
+
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    if (els('[data-hero-eyebrow]').length) tl.fromTo(els('[data-hero-eyebrow]'), { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 });
+    if (els('[data-hero-line]').length) tl.fromTo(els('[data-hero-line]'), { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.12 }, '-=0.2');
+    if (els('[data-hero-sub]').length) tl.fromTo(els('[data-hero-sub]'), { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, '-=0.45');
+    if (els('[data-hero-cta]').length) tl.fromTo(els('[data-hero-cta]'), { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.1 }, '-=0.45');
+    if (els('[data-hero-mock]').length) tl.fromTo(els('[data-hero-mock]'), { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 1.0 }, '-=0.7');
+
+    els('[data-reveal]').forEach(el => {
+      gsap.fromTo(el, { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+    els('[data-reveal-group]').forEach(group => {
+      gsap.fromTo(group.children, { y: 46, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: { trigger: group, start: 'top 84%', once: true } });
+    });
+
+    els('[data-parallax]').forEach(el => {
+      const sp = parseFloat(el.dataset.speed || '0.2');
+      gsap.to(el, { y: () => sp * window.innerHeight * 0.6, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+    });
+
+    els('[data-count]').forEach(el => {
+      const target = parseFloat(el.dataset.count);
+      const pre = el.dataset.prefix || '';
+      const suf = el.dataset.suffix || '';
+      const obj = { v: 0 };
+      gsap.to(obj, {
+        v: target, duration: 1.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+        onUpdate: () => { el.textContent = pre + Math.round(obj.v).toLocaleString('es-ES') + suf; }
+      });
+    });
+
+    els('[data-bar]').forEach(el => {
+      const h = (el.dataset.h || '50') + '%';
+      gsap.fromTo(el, { height: '0%' }, { height: h, duration: 1.1, ease: 'power3.out', delay: 0.5, scrollTrigger: { trigger: el, start: 'top 96%', once: true } });
+    });
+
+    // === MÓDULOS: scroll horizontal con pin ===
+    const modSec = root.querySelector('[data-modules]');
+    const track = root.querySelector('[data-modules-track]');
+    if (modSec && track) {
+      const getDist = () => Math.max(0, track.scrollWidth - modSec.clientWidth + 32);
+      gsap.to(track, {
+        x: () => -getDist(),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: modSec, start: 'top top', end: () => '+=' + getDist(),
+          scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true
+        }
+      });
+    }
+
+    // === ARQUITECTURA MVC: pin + steps reveal ===
+    const mvc = root.querySelector('[data-mvc]');
+    if (mvc) {
+      const steps = mvc.querySelectorAll('[data-mvc-step]');
+      const mtl = gsap.timeline({
+        scrollTrigger: { trigger: mvc, start: 'top top', end: '+=2000', scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true }
+      });
+      steps.forEach((s) => {
+        mtl.fromTo(s, { y: 46, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out' }, '>-0.25');
+      });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => ST.refresh()).catch(() => {});
+    }
+    setTimeout(() => ST.refresh(), 700);
+    window.addEventListener('load', () => ST.refresh());
+  }
+
+  renderVals() {
+    return { rootRef: this.rootRef };
+  }
+}
+</script>
+
+  <script>
+    (function () {
+      function init() {
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+          return setTimeout(init, 100);
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+        var $ = function (sel) { return document.querySelectorAll(sel); };
+        var root = document.querySelector('[ref]') || document.body;
+
+        // progress bar
+        var prog = root.querySelector('[data-progress]');
+        if (prog) {
+          gsap.to(prog, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
+        }
+
+        // hero entrance
+        var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        if (root.querySelector('[data-hero-eyebrow]')) tl.fromTo('[data-hero-eyebrow]', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 });
+        if (root.querySelector('[data-hero-line]')) tl.fromTo('[data-hero-line]', { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.12 }, '-=0.2');
+        if (root.querySelector('[data-hero-sub]')) tl.fromTo('[data-hero-sub]', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, '-=0.45');
+        if (root.querySelector('[data-hero-cta]')) tl.fromTo('[data-hero-cta]', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.1 }, '-=0.45');
+        if (root.querySelector('[data-hero-mock]')) tl.fromTo('[data-hero-mock]', { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 1.0 }, '-=0.7');
+
+        // reveal singles
+        root.querySelectorAll('[data-reveal]').forEach(function (el) {
+          gsap.fromTo(el, { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+        });
+
+        // reveal groups (stagger)
+        root.querySelectorAll('[data-reveal-group]').forEach(function (group) {
+          gsap.fromTo(group.children, { y: 46, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: { trigger: group, start: 'top 84%', once: true } });
+        });
+
+        // parallax
+        root.querySelectorAll('[data-parallax]').forEach(function (el) {
+          var sp = parseFloat(el.getAttribute('data-speed')) || 0.2;
+          gsap.to(el, { y: sp * window.innerHeight * 0.6, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+        });
+
+        // counters
+        root.querySelectorAll('[data-count]').forEach(function (el) {
+          var target = parseFloat(el.getAttribute('data-count'));
+          var pre = el.getAttribute('data-prefix') || '';
+          var suf = el.getAttribute('data-suffix') || '';
+          var obj = { v: 0 };
+          gsap.to(obj, {
+            v: target, duration: 1.7, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+            onUpdate: function () { el.textContent = pre + Math.round(obj.v).toLocaleString('es-ES') + suf; }
+          });
+        });
+
+        // bars
+        root.querySelectorAll('[data-bar]').forEach(function (el) {
+          var h = (el.getAttribute('data-h') || '50') + '%';
+          gsap.fromTo(el, { height: '0%' }, { height: h, duration: 1.1, ease: 'power3.out', delay: 0.5, scrollTrigger: { trigger: el, start: 'top 96%', once: true } });
+        });
+
+        // MODULES: horizontal pin scroll
+        var modSec = root.querySelector('[data-modules]');
+        var track = root.querySelector('[data-modules-track]');
+        if (modSec && track) {
+          function getDist() { return Math.max(0, track.scrollWidth - modSec.clientWidth + 32); }
+          gsap.to(track, {
+            x: function () { return -getDist(); },
+            ease: 'none',
+            scrollTrigger: {
+              trigger: modSec, start: 'top top', end: function () { return '+=' + getDist(); },
+              scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true
+            }
+          });
+        }
+
+        // MVC: pin + steps reveal
+        var mvcSec = root.querySelector('[data-mvc]');
+        if (mvcSec) {
+          var steps = mvcSec.querySelectorAll('[data-mvc-step]');
+          var mtl = gsap.timeline({
+            scrollTrigger: { trigger: mvcSec, start: 'top top', end: '+=2000', scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true }
+          });
+          Array.from(steps).forEach(function (s) {
+            mtl.fromTo(s, { y: 46, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out' }, '>-0.25');
+          });
+        }
+
+        ScrollTrigger.refresh();
+        setTimeout(function () { ScrollTrigger.refresh(); }, 700);
+        window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+
+</html>
